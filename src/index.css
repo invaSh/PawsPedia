@@ -1,0 +1,136 @@
+@import "../src/assets/scss/custom.css";
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import "../node_modules/animate.css/animate.css";
+
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: #dff5f8;
+  color: rgba(255, 255, 255, 0.225);
+}
+
+#elipse1,
+#elipse2,
+#elipse3 {
+  position: fixed;
+  z-index: -1;
+}
+
+#elipse1 {
+  bottom: -600px;
+  left: 100px;
+  max-width: 800px;
+  width: auto;
+}
+#elipse2 {
+  top: 0;
+  left: -50px;
+  max-width: 200px;
+  width: auto;
+}
+
+#elipse3 {
+  right: 0;
+  top: -550px;
+}
+
+#heroDog {
+  position: fixed;
+  right: 0px;
+  width: 800px;
+}
+
+#heroText h1 {
+  font-size: 5rem;
+  font-family: "Inter", sans-serif;
+  animation-delay: 0.2s;
+}
+#heroText p {
+  animation-delay: 0.5s;
+}
+
+.paw {
+  position: absolute;
+}
+
+#paw1 {
+  transform: rotate(-34deg) scale(0.4);
+  bottom: -71px;
+  left: 90px;
+  animation-delay: 2.25s;
+}
+
+#paw2 {
+  bottom: -70px;
+  transform: rotate(-35deg) scale(0.4);
+  left: 133px;
+  animation-delay: 2s;
+}
+
+#paw3 {
+  bottom: -115px;
+  transform: rotate(-55deg) scale(0.4);
+  left: 140px;
+  animation-delay: 1.75s;
+}
+
+#paw4 {
+  bottom: -100px;
+  transform: rotate(-45deg) scale(0.4);
+  left: 185px;
+  animation-delay: 1.5s;
+}
+
+#paw5 {
+  bottom: -150px;
+  transform: rotate(-60deg) scale(0.4);
+  left: 179px;
+  animation-delay: 1.25s;
+}
+
+#paw6 {
+  transform: rotate(-34deg) scale(0.4);
+  bottom: -71px;
+  left: 90px;
+  animation-delay: 1s;
+}
+
+#paw7 {
+  bottom: -70px;
+  transform: rotate(-35deg) scale(0.4);
+  left: 133px;
+  animation-delay: 0.75s;
+}
+
+#paw8 {
+  bottom: -115px;
+  transform: rotate(-55deg) scale(0.4);
+  left: 140px;
+  animation-delay: 0.5s;
+}
+
+#paw9 {
+  bottom: -100px;
+  transform: rotate(-45deg) scale(0.4);
+  left: 185px;
+  animation-delay: 0.25s;
+}
+
+#paw10 {
+  bottom: -150px;
+  transform: rotate(-60deg) scale(0.4);
+  left: 179px;
+  animation-delay: 0s;
+}
+
+
+.pawContainer{
+  margin-left: 30px;
+  top: -50px;
+  position: relative;
+}
+.pawContainer2{
+  margin-left: 165px;
+  top: 15px;
+  position: relative;
+}

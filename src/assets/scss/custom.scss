@@ -1,0 +1,26 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+// $primary: #76cac1; // Primary color
+// $secondary: #BBE2EC; // Secondary color
+// $success: #0D9276; // Success color
+// $info: #ACE2E1; // Info color
+// $warning: #7C93C3; // Warning color
+// $danger: #A25772; // Danger color
+// $light: #F7EEDD; // Light color
+// $dark: #27586f; // Dark color
+
+$theme-colors: (
+  primary: #76cac1, // Primary color
+  secondary: #BBE2EC, // Secondary color
+  success: #0D9276, // Success color
+  info: #ACE2E1, // Info color
+  warning: #7C93C3, // Warning color
+  danger: #A25772, // Danger color
+  light: #F7EEDD, // Light color
+  dark: #27586f // Dark color
+);
+
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
