@@ -1,42 +1,44 @@
 @import "../src/assets/scss/custom.css";
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import "../node_modules/animate.css/animate.css";
 
 body {
   font-family: "League Spartan", sans-serif;
   background-color: #dff5f8;
   color: rgba(255, 255, 255, 0.225);
+  overflow-x: hidden; 
+  overflow-y: auto; 
 }
 
 #elipse1,
 #elipse2,
 #elipse3 {
-  position: fixed;
+  position: absolute;
   z-index: -1;
 }
 
 #elipse1 {
-  bottom: -600px;
-  left: 100px;
+  top: 650px;
+  left: -300px;
   max-width: 800px;
-  width: auto;
 }
 #elipse2 {
   top: 0;
-  left: -50px;
-  max-width: 200px;
+  left: -480px;
+  max-width: 500px;
   width: auto;
 }
 
 #elipse3 {
-  right: 0;
-  top: -550px;
+  overflow: hidden;
+  transform: translate(10%, -40%);
 }
 
 #heroDog {
-  position: fixed;
-  right: 0px;
+  position: absolute;
+  right: -200px;
   width: 800px;
 }
 
@@ -133,4 +135,116 @@ body {
   margin-left: 165px;
   top: 15px;
   position: relative;
+}
+
+
+.infoContainer{
+  position: relative;
+  margin-top: 40rem;
+}
+
+.card{
+  border: none !important;
+  border-radius: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.carousel{
+  padding: 40px;
+}
+
+.testimonial-content {
+  width: 60%;
+}
+
+.testimonial-content  img{
+  width: 80%;
+  border-radius: 50%;
+  min-width: 120px;
+}
+
+.App-header {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  padding-bottom: 2rem;
+}
+
+.slide_direction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide_direction:hover{
+  background-color: #cbd3d4;
+}
+
+.left i,
+.right i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.left,
+.right {
+  background-color: #4496aa;
+  padding-top: 5px;
+  padding-left: 10px;
+  margin: 0 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 10px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.left:hover,
+.right:hover {
+  background-color: #add6e0;
+} 
+
+.left {
+  left: 20%;
+}
+.right {
+  right: 20%;
+}
+.dot {
+  background-color: #333;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.active {
+  background-color: #47d4ba;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.animate__animated {
+  visibility: visible !important;
+}
+
+.banner img{
+  width: 40%;
+}
+
+.banner div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.volunteer{
+  background-image: url("./assets/img/Rectangle 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

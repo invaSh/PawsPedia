@@ -8,7 +8,8 @@ import paw from "../assets/img/paw print.png";
 
 const Hero = () => {
   return (
-    <section>
+    <div className="container">
+      <div className="row">
       <div className="container">
         <div className="row position-relative">
           <div
@@ -18,6 +19,7 @@ const Hero = () => {
             }}
           >
             <img src={elipse2} alt="" id="elipse2" />
+            <img src={elipse1} alt="" id="elipse1" />
             <div
               className="container text-dark d-flex flex-column gap-4"
               id="heroText"
@@ -118,9 +120,9 @@ const Hero = () => {
             />
           </div>
         </div>
-        <img src={elipse1} alt="" id="elipse1" />
       </div>
-    </section>
+    </div>
+    </div>
   );
 };
 
