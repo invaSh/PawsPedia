@@ -23,7 +23,7 @@ function PetAdoptionForm() {
       label: "Important Pre-Information",
       step: "1",
       content: (
-        <Container className="mt-5 mb-3">
+        <Container className="mt-5 mb-3 animate__animated animate__fadeInDown">
           <Card className="p-4 border-0 rounded-5 shadow-sm">
             <Card.Body>
               <h2 className="mb-4 text-dark">Important Pre-Information</h2>
@@ -90,7 +90,7 @@ function PetAdoptionForm() {
       content: (
         <Container className="mt-5 mb-3">
           <Card className="p-4 border-0 rounded-5 shadow-sm">
-            <Card.Body>
+            <Card.Body className="animate__animated animate__fadeIn"> 
               <h2 className="mb-4 text-dark">
                 Before You List a Pet for Adoption
               </h2>
@@ -159,8 +159,8 @@ function PetAdoptionForm() {
       step: "3",
       content: (
         <Container className="mt-5 mb-5 p-5 card rounded-5">
-          <h2 className="mb-4 text-dark">List a Pet for Adoption</h2>
-          <Form>
+          <h2 className="mb-4 text-dark animate__animated animate__fadeIn">List a Pet for Adoption</h2>
+          <Form className="animate__animated animate__fadeIn"> 
             <Row>
               <Col md={6}>
                 <Form.Group className="mb-3" controlId="formPetName">
@@ -283,7 +283,7 @@ function PetAdoptionForm() {
 
   return (
     <>
-      <Container className="card rounded-5">
+      <Container className="card rounded-5 animate__animated animate__fadeInDown">
         <Stepper activeStep={activeStep}>
           {steps.map((step, index) => (
             <Step
@@ -294,6 +294,7 @@ function PetAdoptionForm() {
               style={{
                 fontSize: "30px",
               }}
+              className=""
             />
           ))}
         </Stepper>
