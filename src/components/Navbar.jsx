@@ -19,7 +19,7 @@ function Header() {
       className="animate__animated animate__slideInDown"
     >
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src={logo}
             alt="Logo"
@@ -28,32 +28,14 @@ function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-            <NavDropdown title="Dogs" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Cats" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+          <Nav>
+            <Nav.Link href="/adoption">Find a pet</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Other pets</Nav.Link>
+            <Nav.Link href="/list">List a pet</Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">Community</Nav.Link>
             <Button variant="primary" className="rounded-5 text-light">Log in</Button>
           </Nav>
         </Navbar.Collapse>

@@ -117,6 +117,9 @@ const Hero = () => {
               alt=""
               id="heroDog"
               className=" animate__animated animate__fadeInDown"
+              style={{
+                zIndex: "-1"
+              }}
             />
           </div>
         </div>

@@ -221,9 +221,6 @@ body {
   height: 15px;
   border-radius: 50%;
 }
-.active {
-  background-color: #47d4ba;
-}
 
 .hidden {
   visibility: hidden;
@@ -247,4 +244,57 @@ body {
   background-image: url("./assets/img/Rectangle 1.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.half-height {
+  height: calc((100% - 1rem) / 2); 
+}
+
+.custom-pagination .page-item .page-link {
+  border-radius: 50%;
+  margin: 0 5px; 
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #84cfc7;
+  border-color: #84cfc7;
+  color: white;
+}
+
+.custom-pagination .page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.custom-pagination .page-item .page-link {
+  color: #84cfc7;
+  border: 1px solid #dee2e6;
+}
+
+.custom-pagination .page-link {
+  border-radius: 50%;
+  padding: 0.5rem 0.75rem;
+}
+
+
+.step{
+  font-size: 50px;
+}
+
+.StepButton-d2-0-2-8.active, 
+.StepButton-d2-0-2-8.completed,
+.StepButton-d6-0-2-12.active,
+.StepButton-d6-0-2-12.completed,
+.StepButton-d10-0-2-22.active,
+.StepButton-d6-0-2-18.completed,
+.StepButton-d10-0-2-32.active,
+.StepButton-d6-0-2-18.active   
+  {
+  background-color: #84cfc7 !important; 
 }
