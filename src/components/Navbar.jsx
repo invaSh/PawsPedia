@@ -35,7 +35,7 @@ function Header() {
             <Nav.Link href="/list">List a pet</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Community</Nav.Link>
+            <Nav.Link href="/community">Community</Nav.Link>
             <Button variant="primary" className="rounded-5 text-light">Log in</Button>
           </Nav>
         </Navbar.Collapse>
