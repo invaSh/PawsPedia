@@ -74,23 +74,23 @@ const Home = () => {
       
       <Hero />
       <Info />
-      {/* <Carousel images={images} /> */}
       <section
         className="row justify-content-center gap-3"
         style={{ margin: "250px 0" }}
-      >
+        >
         {pets.map((pet, index) => (
           <Cards
-            key={index}
-            img={pet.img}
-            title={pet.name}
-            desc={pet.desc}
-            delayFactor={index * delayFactor}
+          key={index}
+          img={pet.img}
+          title={pet.name}
+          desc={pet.desc}
+          delayFactor={index * delayFactor}
           />
         ))}
       </section>
       <Video />
       <Banner />
+      <Carousel images={images} />
       <VolunteerForm />
     </>
   );

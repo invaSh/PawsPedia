@@ -1,82 +1,62 @@
 import React, { useState } from "react";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  ListGroup,
+  Carousel,
+} from "react-bootstrap";
 import "animate.css";
 
-const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [animationClass, setAnimationClass] = useState("");
-
-  const animateSlide = (outAnimation, inAnimation, updateIndex) => {
-    setAnimationClass(`animate__animated ${outAnimation}`);
-    setTimeout(() => {
-      updateIndex();
-      setAnimationClass(`animate__animated ${inAnimation}`);
-      setTimeout(() => {
-        setAnimationClass("");
-      }, 300);
-    }, 300); 
-  };
-
-  const handleNext = () => {
-    animateSlide("animate__slideOutLeft", "animate__slideInRight", () =>
-      setCurrentIndex((prevIndex) =>
-        prevIndex + 1 === images.length ? 0 : prevIndex + 1
-      )
-    );
-  };
-
-  const handlePrevious = () => {
-    animateSlide("animate__slideOutRight", "animate__slideInLeft", () =>
-      setCurrentIndex((prevIndex) =>
-        prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
-      )
-    );
-  };
-
-  const handleDotClick = (index) => {
-    if (index !== currentIndex) {
-      const outAnimation = index > currentIndex ? "animate__slideOutLeft" : "animate__slideOutRight";
-      const inAnimation = index > currentIndex ? "animate__slideInRight" : "animate__slideInLeft";
-      animateSlide(outAnimation, inAnimation, () => setCurrentIndex(index));
-    }
-  };
-
+const CarouselItem = ({ images }) => {
   return (
-    <section className="row my-5">
-      <div className="carousel d-flex flex-column align-items-center">
-        <div className={`testimonial-content card text-dark py-3 px-5 rounded-3 ${animationClass}`}>
-          <div className="card-body row align-items-center justify-content-center">
-            <div className="col-lg-4 text-center">
-              <img key={currentIndex} src={images[currentIndex].img} alt={images[currentIndex].title} />
-            </div>
-            <div className="col-lg-8 mt-sm-3">
-              <h4>{images[currentIndex].title}</h4>
-              <p>{images[currentIndex].subtitle}</p>
-              <p>
-                <strong>- {images[currentIndex].user}</strong>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="slide_direction">
-          <div className="left" onClick={handlePrevious}>
-            <i className="bi bi-arrow-left"></i>
-          </div>
-          <div className="right" onClick={handleNext}>
-            <i className="bi bi-arrow-right"></i>
-          </div>
-        </div>
-        <div className="indicator d-flex justify-content-center">
-          {images.map((_, index) => (
-            <div
-              key={index}
-              className={`dot ${currentIndex === index ? "active" : ""}`}
-              onClick={() => handleDotClick(index)}
-            ></div>
+    <Row className="d-flex justify-content-center">
+      <Col md={7}>
+        <Carousel
+          indicators={true}
+          prevIcon={
+            <span className="carousel-control-prev-icon bg-primary rounded-3" />
+          }
+          nextIcon={
+            <span className="carousel-control-next-icon bg-primary rounded-3" />
+          }
+        >
+          {images.map((image, index) => (
+            <Carousel.Item key={index}>
+              <Card>
+                <Card.Body className="m-3">
+                  <Row>
+                    <Col
+                      lg={4}
+                      className="d-flex justify-content-center align-items-center mb-4 mb-lg-0"
+                    >
+                      <img
+                        src={image.img}
+                        className="rounded-circle img-fluid shadow-1"
+                        alt={image.title}
+                        width="200"
+                        height="200"
+                      />
+                    </Col>
+                    <Col lg={8} className="text-dark">
+                      <h5 className="fw-bold lead mb-2">
+                        <strong>{image.user}</strong>
+                      </h5>
+                      <p className="fw-bold">{image.title}</p>
+                      <p className="text-muted mb-4">
+                        {image.subtitle}
+                      </p>
+                    </Col>
+                  </Row>
+                </Card.Body>
+              </Card>
+            </Carousel.Item>
           ))}
-        </div>
-      </div>
-    </section>
+        </Carousel>
+      </Col>
+    </Row>
   );
 };
-
-export default Carousel;
+export default CarouselItem;

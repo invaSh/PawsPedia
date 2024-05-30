@@ -1,10 +1,28 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 import quizImage from "../assets/img/noimg.jpg";
 import gameImage from "../assets/img/noimg.jpg";
 import tipsImage from "../assets/img/noimg.jpg";
+import posts from "../assets/data/posts.json";
 
 const Community = () => {
+
+  const navigate = useNavigate();
+
+  const getContentUntilFirstPeriod = (content) => {
+    const firstPeriodIndex = content.indexOf('.');
+    if (firstPeriodIndex !== -1) {
+      return content.substring(0, firstPeriodIndex + 1);
+    } else {
+      return content; 
+    }
+  };
+
+  const handlePostClick = (postId) => {
+    navigate(`/post/${postId}`); 
+  };
+
   return (
     <Container>
       <Row className="justify-content-md-center animate__animated animate__slideInDown">
@@ -55,24 +73,31 @@ const Community = () => {
         <h3 className="text-dark my-5 text-center">Read our forum</h3>
       </Row>
       <Row className="justify-content-md-center gap-5">
-        <Card>
-          <Card.Header as="h5">By Olivia Davis</Card.Header>
-          <Row>
-            <Col lg={1} className="d-flex justify-content-center p-4">
-                <img src={quizImage} style={{ borderRadius: "50%", width: "100%", objectFit: "cover" }} alt="" />
-            </Col>
-            <Col lg={11}>
-              <Card.Body>
-                <Card.Title>Special title treatment</Card.Title>
-                <Card.Text>
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Col>
-          </Row>
-        </Card>
+        {posts.map((post, index) => (
+          <Card key={index}>
+            <Card.Header as="h5">By @{post.author}</Card.Header>
+            <Row className="align-items-center">
+              <div className="col-sm-2 d-flex justify-content-center p-4">
+                <img
+                  src={post.profileImage}
+                  style={{
+                    borderRadius: "30px",
+                    width: "100%",
+                    objectFit: "cover"
+                  }}
+                  alt=""
+                />
+              </div>
+              <div className="col-10">
+                <Card.Body>
+                  <Card.Title>{post.title}</Card.Title>
+                  <Card.Text>{getContentUntilFirstPeriod(post.content)}</Card.Text>
+                  <Button variant="primary" onClick={() => handlePostClick(post.postId)}>Go to post</Button>
+                </Card.Body>
+              </div>
+            </Row>
+          </Card>
+        ))}
       </Row>
     </Container>
   );

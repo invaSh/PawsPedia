@@ -1,29 +1,133 @@
 import React from "react";
-import { Container, Row, Col, Card, Button, ListGroup } from "react-bootstrap";
+import { useParams, Link } from "react-router-dom";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Button,
+  ListGroup,
+  Carousel,
+} from "react-bootstrap";
+import posts from "../assets/data/posts.json";
 
 const Post = () => {
+  const arrowStyles = {
+    backgroundColor: "#000",
+    borderRadius: "50%",
+  };
+
+  const { id } = useParams();
+  const post = posts.find((post) => post.postId === id);
+
+  const contentWithBreaks = post.content.replace(/\n\n/g, "<br /><br />");
+
+  if (!post) {
+    return <div>Post not found</div>;
+  }
+
+  const tagColors = [
+    "primary",
+    "secondary",
+    "info",
+    "light",
+    "dark",
+    "danger",
+    "warning",
+    "primary",
+    "secondary",
+    "info",
+    "light",
+    "dark",
+    "danger",
+    "warning",
+    "primary",
+    "secondary",
+    "info",
+    "light",
+    "dark",
+    "danger",
+    "warning",
+  ];
+  const tags = [
+    "Adoption",
+    "Rescue",
+    "Foster",
+    "Shelter",
+    "AdoptDontShop",
+    "ForeverHome",
+    "SpayAndNeuter",
+    "AnimalWelfare",
+    "PetRescue",
+    "PetAdoption",
+    "AnimalShelter",
+    "AdoptablePets",
+    "AdoptionEvents",
+    "PetFostering",
+    "AdoptionAwareness",
+    "AnimalAdoption",
+    "FosterPets",
+    "AdoptionAgency",
+    "PetAdoptionCenter",
+    "RescuePets",
+    "AdoptionSuccess",
+  ];
+
+  const randomPosts = posts.slice(5, 8).map((post) => (
+    <ListGroup.Item
+      key={post.postId}
+      className="d-flex justify-content-between align-items-start"
+    >
+      <span>
+        <h6>{post.title}</h6>
+        <p className="text-muted">{post.author}</p>
+      </span>
+      <Link to={`/post/${post.postId}`}>
+        <Button variant="secondary">Read more</Button>
+      </Link>
+    </ListGroup.Item>
+  ));
+
   return (
     <div>
       <Row>
         <Col lg={8} style={{ padding: "3rem 2rem" }}>
           <Container>
             <Card>
-              <Card.Img
-                variant="top"
-                className="p-3"
-                src="src/assets/img/noimg.jpg"
-              />
+              <Carousel
+                prevIcon={
+                  <span
+                    className="carousel-control-prev-icon"
+                    style={arrowStyles}
+                    aria-hidden="true"
+                  />
+                }
+                nextIcon={
+                  <span
+                    className="carousel-control-next-icon"
+                    style={arrowStyles}
+                    aria-hidden="true"
+                  />
+                }
+              >
+                {post.images.map((imageUrl, index) => (
+                  <Carousel.Item key={index} className="custom-carousel-item">
+                    <img
+                      className="d-block w-100 custom-carousel-item"
+                      src={imageUrl}
+                      alt={`Image ${index + 1}`}
+                    />
+                  </Carousel.Item>
+                ))}
+              </Carousel>
               <Card.Body>
                 <Card.Title className="text-dark">
-                  <h1>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </h1>
+                  <h1>{post.title}</h1>
                 </Card.Title>
                 <Row className="align-items-center border-bottom border-2 my-3 py-3">
                   <div className="col-1">
                     <img
-                      src="src/assets/img/avatars/avatar5.png"
+                      src={post.profileImage}
                       style={{
                         maxWidth: "85px",
                         width: "100%",
@@ -34,45 +138,26 @@ const Post = () => {
                   </div>
                   <div className="col-11">
                     <h5>
-                      <strong>Name</strong>
+                      <strong>{post.author}</strong>
                     </h5>
-                    <h6 className="">Date</h6>
+                    <h6 className="">{post.date}</h6>
                   </div>
                 </Row>
                 <Card.Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                  <br />
-                  <br />
-                  Duis auteirure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia
-                  deserunt mollit anim id est laborum. Sed ut perspiciatis unde
-                  omnis iste natus error sit voluptatem accusantium doloremque
-                  laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                  inventore veritatis et quasi architecto beatae vitae dicta
-                  sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                  aspernatur aut odit aut fugit, sed quia consequuntur magni
-                  dolores eos qui ratione voluptatem sequi nesciunt. <br />{" "}
-                  <br /> Neque porro quisquam est, qui dolorem ipsum quia dolor
-                  sit amet, consectetur, adipisci velit, sed quia non numquam
-                  eius modi tempora incidunt ut labore et dolore magnam aliquam
-                  quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-                  exercitationem ullam corporis suscipit laboriosam, nisi ut
-                  aliquid ex ea commodi consequatur? Quis autem vel eum iure
-                  reprehenderit qui in ea voluptate velit esse quam nihil
-                  molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                  voluptas nulla pariatur?
+                  <p dangerouslySetInnerHTML={{ __html: contentWithBreaks }} />
                 </Card.Text>
               </Card.Body>
               <Card.Footer className="py-3">
-                <span className="badge bg-primary fs-5 my-3 me-3"> smth</span>
-                <span className="badge bg-secondary fs-5 my-3 me-3"> smth</span>
-                <span className="badge bg-warning fs-5 my-3 me-3"> smth</span>
-                <span className="badge bg-danger fs-5 my-3 me-3"> smth</span>
-                <span className="badge bg-dark fs-5 my-3 me-3"> smth</span>
+                {post.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className={`badge bg-${
+                      tagColors[index % tagColors.length]
+                    } fs-5 my-3 me-3`}
+                  >
+                    {tag}
+                  </span>
+                ))}
               </Card.Footer>
             </Card>
           </Container>
@@ -86,7 +171,7 @@ const Post = () => {
                 <Row className="justify-content-center">
                   <div className="col-2">
                     <img
-                      src="src/assets/img/avatars/avatar5.png"
+                      src={post.profileImage}
                       style={{
                         width: "80%",
                         borderRadius: "20%",
@@ -111,34 +196,33 @@ const Post = () => {
               </Card.Body>
             </Card>
           </Container>
-          <Container className="bg-white">
-            <h5 className="text-dark py-3">5 Comments</h5>
-            <Card className="my-3 p-3">
-              <Row className="justify-content-center">
-                <div className="col-2">
-                  <img
-                    src="src/assets/img/avatars/avatar5.png"
-                    style={{
-                      width: "80%",
-                      borderRadius: "20%",
-                    }}
-                    alt=""
-                  />
-                </div>
-                <div className="col-10">
-                  <h6>Name</h6>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Earum nesciunt harum vero incidunt, numquam molestiae
-                    debitis libero, vel ipsam deserunt delectus voluptatibus
-                    reprehenderit nihil itaque eius dolore expedita quas
-                    voluptate animi sit recusandae porro! Non facilis natus eius
-                    repudiandae, saepe voluptates perspiciatis ex eligendi
-                    velit, molestias, dolorem pariatur voluptatem deleniti.
-                  </p>
-                </div>
-              </Row>
-            </Card>
+          <Container className="card">
+            <Card.Header>
+              <h5 className="text-dark py-3">5 Comments</h5>
+            </Card.Header>
+            {post.comments.map((comment, index) => (
+              <div className="px-3">
+                <Card className="my-3 p-3" key={index}>
+                  <Row className="justify-content-center">
+                    <div className="col-2">
+                      <img
+                        src={comment.authorImg}
+                        style={{
+                          width: "80%",
+                          borderRadius: "20%",
+                        }}
+                        alt=""
+                      />
+                    </div>
+                    <div className="col-10">
+                      <h6>{comment.author}</h6>
+                      <p>{comment.content}</p>
+                      <p>{comment.date}</p>
+                    </div>
+                  </Row>
+                </Card>
+              </div>
+            ))}
           </Container>
         </Col>
         <Col lg={4} style={{ padding: "3rem 2rem" }}>
@@ -148,28 +232,7 @@ const Post = () => {
             </Card.Header>
             <Card.Body>
               <ListGroup variant="flush">
-                <ListGroup.Item className="d-flex justify-content-between align-items-start">
-                    <span>
-                    <h6>Cras justo odio</h6>
-                    <p className="text-muted">Author</p>
-                    </span>
-                    <Button variant="secondary">Read more</Button>
-                </ListGroup.Item>
-                <ListGroup.Item className="d-flex justify-content-between align-items-start">
-                    <span>
-                    <h6>Cras justo odio</h6>
-                    <p className="text-muted">Author</p>
-                    </span>
-                    <Button variant="secondary">Read more</Button>
-                </ListGroup.Item>
-                <ListGroup.Item className="d-flex justify-content-between align-items-start">
-                    <span>
-                    <h6>Cras justo odio</h6>
-                    <p className="text-muted">Author</p>
-                    </span>
-                    <Button variant="secondary">Read more</Button>
-                </ListGroup.Item>
-               
+                {randomPosts}
               </ListGroup>
             </Card.Body>
           </Card>
@@ -178,27 +241,14 @@ const Post = () => {
               <h5>Check out other tags</h5>
             </Card.Header>
             <Card.Body>
-             <span className="badge bg-primary m-3 fs-5">Tag</span>
-             <span className="badge bg-secondary m-3 fs-5">Tag</span>
-             <span className="badge bg-info m-3 fs-5">Tag</span>
-             <span className="badge bg-light text-dark m-3 fs-5">Tag</span>
-             <span className="badge bg-dark m-3 fs-5">Tag</span>
-             <span className="badge bg-danger m-3 fs-5">Tag</span>
-             <span className="badge bg-warning m-3 fs-5">Tag</span>
-             <span className="badge bg-primary m-3 fs-5">Tag</span>
-             <span className="badge bg-secondary m-3 fs-5">Tag</span>
-             <span className="badge bg-info m-3 fs-5">Tag</span>
-             <span className="badge bg-light text-dark m-3 fs-5">Tag</span>
-             <span className="badge bg-dark m-3 fs-5">Tag</span>
-             <span className="badge bg-danger m-3 fs-5">Tag</span>
-             <span className="badge bg-warning m-3 fs-5">Tag</span>
-             <span className="badge bg-primary m-3 fs-5">Tag</span>
-             <span className="badge bg-secondary m-3 fs-5">Tag</span>
-             <span className="badge bg-info m-3 fs-5">Tag</span>
-             <span className="badge bg-light text-dark m-3 fs-5">Tag</span>
-             <span className="badge bg-dark m-3 fs-5">Tag</span>
-             <span className="badge bg-danger m-3 fs-5">Tag</span>
-             <span className="badge bg-warning m-3 fs-5">Tag</span>
+              {tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className={`badge bg-${tagColors[index]} m-3 fs-5`}
+                >
+                  {tag}
+                </span>
+              ))}
             </Card.Body>
           </Card>
         </Col>

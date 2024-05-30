@@ -9,23 +9,26 @@
       "https://images.pexels.com/photos/2887566/pexels-photo-2887566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/53261/pexels-photo-53261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     ],
-    "videos": ["src/assets/video/video1.mp4"],
+    "videos": ["/src/assets/video/video1.mp4"],
     "category": "Adoption Stories",
     "comments": [
       {
         "author": "JohnSmith456",
         "date": "2024-05-21",
-        "content": "This is such a heartwarming story! I'm so happy for you and Max."
+        "content": "This is such a heartwarming story! I'm so happy for you and Max.",
+        "authorImg" : "/src/assets/img/avatars/avatar1.png"
       },
       {
         "author": "PetLover789",
         "date": "2024-05-22",
-        "content": "Max is adorable! Thanks for sharing your story."
+        "content": "Max is adorable! Thanks for sharing your story.",
+        "authorImg" : "/src/assets/img/avatars/avatar3.png"
+
       }
     ],
     "likes": 120,
     "tags": ["adoption", "dogs", "happy-ending"],
-    "profileImage": "src/assets/img/avatars/avatar2.png"
+    "profileImage": "/src/assets/img/avatars/avatar2.png"
   },
   {
     "postId": "2",
@@ -38,10 +41,23 @@
     ],
     "videos": [],
     "category": "Pet Care Tips",
-    "comments": [],
+    "comments": [
+      {
+        "author": "JohnSmith456",
+        "date": "2024-05-21",
+        "content": "Great article, thanks!.",
+        "authorImg" : "/src/assets/img/avatars/avatar1.png"
+      },
+      {
+        "author": "Janey",
+        "date": "2024-05-21",
+        "content": "Thanks for the insight!",
+        "authorImg" : "/src/assets/img/avatars/avatar8.png"
+      }
+    ],
     "likes": 85,
     "tags": ["pet care", "new owners", "tips"],
-    "profileImage": "src/assets/img/avatars/avatar3.png"
+    "profileImage": "/src/assets/img/avatars/avatar3.png"
   },
   {
     "postId": "3",
@@ -53,23 +69,25 @@
       "https://images.pexels.com/photos/5256142/pexels-photo-5256142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/5256143/pexels-photo-5256143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     ],
-    "videos": ["src/assets/video/video1.mp4"],
+    "videos": ["/src/assets/video/video1.mp4"],
     "category": "Rescue Stories",
     "comments": [
       {
         "author": "DogLover22",
         "date": "2024-05-23",
-        "content": "Such a touching story. Bella is lucky to have you!"
+        "content": "Such a touching story. Bella is lucky to have you!",
+        "authorImg" : "/src/assets/img/avatars/avatar8.png"
       },
       {
         "author": "CatPerson99",
         "date": "2024-05-24",
-        "content": "Amazing story! Thanks for rescuing Bella."
+        "content": "Amazing story! Thanks for rescuing Bella.",
+        "authorImg" : "/src/assets/img/avatars/avatar6.png"
       }
     ],
     "likes": 90,
     "tags": ["rescue", "dogs", "heartwarming"],
-    "profileImage": "src/assets/img/avatars/avatar4.png"
+    "profileImage": "/src/assets/img/avatars/avatar4.png"
   },
   {
     "postId": "4",
@@ -80,18 +98,19 @@
     "images": [
       "https://images.pexels.com/photos/5732537/pexels-photo-5732537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     ],
-    "videos": ["src/assets/video/video1.mp4"],
+    "videos": ["/src/assets/video/video1.mp4"],
     "category": "Training Tips",
     "comments": [
       {
         "author": "PuppyOwner123",
         "date": "2024-05-20",
-        "content": "This is very helpful! My puppy is already showing improvement."
+        "content": "This is very helpful! My puppy is already showing improvement.",
+        "authorImg" : "/src/assets/img/avatars/avatar7.png"
       }
     ],
     "likes": 150,
     "tags": ["training", "puppies", "tips"],
-    "profileImage": "src/assets/img/avatars/avatar1.png"
+    "profileImage": "/src/assets/img/avatars/avatar1.png"
   },
   {
     "postId": "5",
@@ -103,23 +122,25 @@
       "https://images.pexels.com/photos/1683748/pexels-photo-1683748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/12505893/pexels-photo-12505893.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     ],
-    "videos": ["src/assets/video/video1.mp4"],
+    "videos": ["/src/assets/video/video1.mp4"],
     "category": "DIY Projects",
     "comments": [
       {
         "author": "HandyOwner",
         "date": "2024-05-26",
-        "content": "I tried the rope toy and my dog loves it! Thanks for the great ideas."
+        "content": "I tried the rope toy and my dog loves it! Thanks for the great ideas.",
+        "authorImg" : "/src/assets/img/avatars/avatar6.png"
       },
       {
         "author": "CreativeCat",
         "date": "2024-05-27",
-        "content": "These projects are perfect for keeping my cat entertained!"
+        "content": "These projects are perfect for keeping my cat entertained!",
+        "authorImg" : "/src/assets/img/avatars/avatar8.png"
       }
     ],
     "likes": 75,
     "tags": ["DIY", "toys", "pets"],
-    "profileImage": "src/assets/img/avatars/avatar5.png"
+    "profileImage": "/src/assets/img/avatars/avatar5.png"
   },
   {
     "postId": "6",
@@ -134,17 +155,19 @@
       {
         "author": "FitPetOwner",
         "date": "2024-05-27",
-        "content": "I completely agree! My dog has helped me stay active and happy."
+        "content": "I completely agree! My dog has helped me stay active and happy.",
+        "authorImg" : "/src/assets/img/avatars/avatar8.png"
       },
       {
         "author": "WellnessGuru",
         "date": "2024-05-28",
-        "content": "Great article! Pets truly have a positive impact on our mental health."
+        "content": "Great article! Pets truly have a positive impact on our mental health.",
+        "authorImg" : "/src/assets/img/avatars/avatar7.png"
       }
     ],
     "likes": 130,
     "tags": ["health", "wellness", "pets"],
-    "profileImage": "src/assets/img/avatars/avatar6.png"
+    "profileImage": "/src/assets/img/avatars/avatar6.png"
   },
   {
     "postId": "7",
@@ -162,17 +185,19 @@
       {
         "author": "GlobeTrotter",
         "date": "2024-05-28",
-        "content": "This list is fantastic! I can’t wait to take my dog to some of these places."
+        "content": "This list is fantastic! I can’t wait to take my dog to some of these places.",
+        "authorImg" : "/src/assets/img/avatars/avatar8.png"
       },
       {
         "author": "AdventureSeeker",
         "date": "2024-05-29",
-        "content": "Thanks for the tips! My cat will love these destinations."
+        "content": "Thanks for the tips! My cat will love these destinations.",
+        "authorImg" : "/src/assets/img/avatars/avatar3.png"
       }
     ],
     "likes": 95,
     "tags": ["travel", "vacation", "pet-friendly"],
-    "profileImage": "src/assets/img/avatars/avatar7.png"
+    "profileImage": "/src/assets/img/avatars/avatar7.png"
   },
   {
     "postId": "8",
@@ -190,16 +215,18 @@
       {
         "author": "AnimalLover123",
         "date": "2024-05-29",
-        "content": "This is so helpful! I can now better understand my dog's needs."
+        "content": "This is so helpful! I can now better understand my dog's needs.",
+        "authorImg" : "/src/assets/img/avatars/avatar7.png"
       },
       {
         "author": "CatWhisperer",
         "date": "2024-05-30",
-        "content": "Great information! My cat’s behavior makes much more sense now."
+        "content": "Great information! My cat’s behavior makes much more sense now.",
+        "authorImg" : "/src/assets/img/avatars/avatar2.png"
       }
     ],
     "likes": 110,
     "tags": ["behavior", "communication", "pets"],
-    "profileImage": "src/assets/img/avatars/avatar8.png"
+    "profileImage": "/src/assets/img/avatars/avatar8.png"
   }
 ]

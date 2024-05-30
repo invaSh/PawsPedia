@@ -16,7 +16,7 @@ function App() {
           <Route path="/adoption" element={<Adopt />} />
           <Route path="/list" element={<List />} />
           <Route path="/community" element={<Community />} />
-          <Route path="/post" element={<Post />} />
+          <Route path="/post/:id" element={<Post />} />
         </Routes>
       </Router>
     </>
