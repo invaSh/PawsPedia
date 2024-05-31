@@ -5,6 +5,7 @@ import Carousel from "../components/Carousel";
 import Cards from "../components/Cards";
 import Video from "../components/Video";
 import Banner from "../components/Banner";
+import GridLayout from "../components/GridLayout";
 import VolunteerForm from "../components/VolunteerForm";
 
 const Home = () => {
@@ -88,6 +89,8 @@ const Home = () => {
           />
         ))}
       </section>
+
+      <GridLayout />
       <Video />
       <Banner />
       <Carousel images={images} />
