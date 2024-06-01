@@ -1,14 +1,19 @@
 import React from "react";
 import elipse2 from "../assets/img/Ellipse 2.png";
 import elipse1 from "../assets/img/Ellipse 1.png";
+import arrow from "../assets/img/arrow.png";
+import arrow2 from "../assets/img/arrow2.png";
 import useIntersectionObserver from "../js/useIntersectionObserver";
-
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import Cat1 from "../assets/animations/Cat1.json";
+import CatOwner from "../assets/animations/CatOwner.json";
+import Health from "../assets/animations/Health.json";
+import Lottie from "lottie-react";
 
 const Info = () => {
   const elementRef = useIntersectionObserver("animate__zoomIn");
   return (
     <>
-    
       <div className="position-relative">
         <img
           src={elipse2}
@@ -22,9 +27,10 @@ const Info = () => {
         />
       </div>
       <section
-        ref={elementRef}
-        className="container hidden w-100 text-dark p-5 infoContainer"
+        ref={useIntersectionObserver("animate__zoomIn")}
+        className="container w-100 text-dark p-5 infoContainer fs-5"
       >
+
         <h6 className="text-muted text-center">
           Our Mission: Rescuing, Rehoming, and Rebuilding Lives
         </h6>
@@ -36,27 +42,6 @@ const Info = () => {
             haven for animals facing uncertain futures, offering them a second
             chance at happiness and security. Our objectives are
             straightforward:
-            <ul className="mt-3">
-              <li>
-                Rescue: We work tirelessly to rescue pets from shelters, abusive
-                situations, and neglect, providing them with the care and
-                attention they need to thrive.
-              </li>
-            </ul>
-          </div>
-          <div className="col-lg-5 position-relative">
-            <ul>
-              <li>
-                Rehome: Through our comprehensive adoption process, we match
-                each pet with a loving, responsible forever home, ensuring a
-                seamless transition and a lifetime of happiness.
-              </li>
-              <li>
-                Rebuild: We are committed to providing ongoing support and
-                resources to both pets and adopters, empowering them to build
-                strong, fulfilling relationships and enriching lives.
-              </li>
-            </ul>
           </div>
         </div>
       </section>
@@ -69,10 +54,83 @@ const Info = () => {
             width: "900px",
             top: "-300px",
             right: "-500px",
-            zIndex: "-1"
+            zIndex: "-1",
           }}
         />
       </div>
+      <Container style={{ marginTop: "300px", position: "relative" }}>
+        <Row className="text-dark align-items-center fs-5 text-center" style={{ marginBottom: "200px" }} >
+          <Col lg={6} ref={useIntersectionObserver("animate__zoomIn")} className="hidden" style={{ animationDuration: "2s"}}>
+            <h2>Rehome</h2>
+            <p>
+              Rehoming is a vital service provided by pet adoption centers,
+              ensuring rescued animals find loving, permanent homes. The process
+              involves carefully matching animals with suitable adopters based
+              on lifestyle, environment, and compatibility. Potential adopters
+              go through an application process, including interviews and home
+              visits, to ensure the best fit. <br /> <br /> Adoption counselors
+              provide guidance and support to new pet owners, helping them
+              integrate their new family member smoothly. Rehoming not only
+              gives animals a fresh start but also brings joy and companionship
+              to their new families, creating lasting bonds and promoting
+              responsible pet ownership.
+            </p>
+          </Col>
+          <Col lg={6} ref={useIntersectionObserver("animate__slideInLeft")} style={{ animationDuration: "2s"}}>
+            <Lottie animationData={CatOwner} />
+          </Col>
+        </Row>
+        <div style={{ position: "absolute", top: "425px" }} className="arrow hidden" ref={useIntersectionObserver("animate__fadeIn")}  >
+          <img src={arrow} style={{ width: "30%" }} alt=""  />
+        </div>
+        <Row className="text-dark align-items-center fs-5 text-center" style={{ marginBottom: "200px" }}>
+          <Col lg={6} ref={useIntersectionObserver("animate__slideInRight")} style={{ animationDuration: "2s"}}>
+            <Lottie animationData={Cat1} />
+          </Col>
+          <Col lg={6} ref={useIntersectionObserver("animate__zoomIn")} className="hidden" style={{ animationDuration: "2s"}}>
+            <h2>Rescue</h2>
+            <p>
+              Rescue operations at pet adoption centers are critical for saving
+              animals from neglect, abuse, abandonment, and dangerous
+              situations. These centers often respond to emergency calls,
+              collaborate with local authorities, and conduct investigations to
+              identify animals in need. <br />
+              <br /> Upon rescue, the animals are brought to the center, where
+              they receive immediate medical attention, nourishment, and a safe
+              environment. The dedicated staff and volunteers work tirelessly to
+              provide comfort and care, helping the animals to recover
+              physically and emotionally. These rescue efforts not only save
+              lives but also give animals a second chance at finding a loving
+              and permanent home.
+            </p>
+          </Col>
+        </Row>
+        <div style={{ position: "absolute", top: "1150px",right: "-500px" }} className="arrow hidden" ref={useIntersectionObserver("animate__fadeIn")}  >
+          <img src={arrow} style={{ width: "30%" }} alt=""  />
+        </div>
+        <Row className="text-dark align-items-center justify-content-between  fs-5 text-center">
+          <Col lg={6} ref={elementRef} className="hidden" style={{ animationDuration: "2s"}}>
+            <h2>Rehabilitate</h2>
+            <p>
+              Rehabilitation is a crucial aspect of pet adoption centers,
+              focusing on the physical and emotional recovery of rescued
+              animals. Upon arrival, each animal undergoes a thorough health
+              assessment, receiving necessary medical treatments and
+              vaccinations. Behavioral training is provided to address any
+              trauma or anxiety, helping them adapt to human interaction and
+              social environments. <br /> <br /> The rehabilitation process often includes
+              proper nutrition, exercise, and enrichment activities to ensure
+              holistic recovery. Skilled staff and volunteers work patiently to
+              rebuild the animals' trust and confidence, preparing them for
+              adoption. This comprehensive care transforms their lives, making
+              them healthy, happy, and ready for a new home.
+            </p>
+          </Col>
+          <Col lg={6} className="d-flex justify-content-center hidden" ref={useIntersectionObserver("animate__slideInLeft")} style={{ animationDuration: "2s"}}>
+            <Lottie animationData={Health} style={{ width : "80%"}}/>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };

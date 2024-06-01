@@ -316,6 +316,10 @@ body {
   background-color: #84cfc7 !important;
 }
 
+.counter h1{
+  font-size: 4em;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

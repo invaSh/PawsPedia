@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Bella",
+    "species": "Dog",
+    "breed": "Labrador Retriever",
+    "age": 3,
+    "gender": "Female",
+    "description": "Bella is a friendly and energetic Labrador who loves to play fetch and enjoys long walks. She is great with kids and other pets.",
+    "image": "https://img.freepik.com/free-photo/beautiful-dog-labrador-lying-grass-with-orange-ball-sunset_8353-6476.jpg?t=st=1717234126~exp=1717237726~hmac=ef630912a6eafabc5af793826a990a402ed539b53920b20f174516b3f0cd9c28&w=1060",
+    "status": "Available"
+  },
+  {
+    "id": 2,
+    "name": "Max",
+    "species": "Cat",
+    "breed": "Siamese",
+    "age": 2,
+    "gender": "Male",
+    "description": "Max is a curious and intelligent Siamese cat. He enjoys lounging in sunny spots and playing with feather toys. Max would do best in a quiet home.",
+    "image": "https://img.freepik.com/free-photo/cute-cat-sitting-couch_23-2149078348.jpg?t=st=1717233584~exp=1717237184~hmac=7f9758cd8112464069227a1965b4046ed2225589953dfc07ed25c743245c1f7d&w=1060",
+    "status": "Adopted"
+  },
+  {
+    "id": 3,
+    "name": "Charlie",
+    "species": "Dog",
+    "breed": "Beagle",
+    "age": 4,
+    "gender": "Male",
+    "description": "Charlie is a playful Beagle with a keen sense of smell. He loves exploring new places and is very affectionate. He gets along well with other dogs.",
+    "image": "https://img.freepik.com/free-photo/beagle-tricolor-puppy-is-posing-cute-white-braun-black-doggy-pet-is-sitting-blue-background-looks-attented-sad-studio-photoshot-concept-motion-movement-action-negative-space_155003-33947.jpg?t=st=1717233614~exp=1717237214~hmac=608a956744d3f6badbfe0279897b3863e2368305307f2bf8ba0102b385de391a&w=1060",
+    "status": "Available"
+  },
+  {
+    "id": 4,
+    "name": "Luna",
+    "species": "Cat",
+    "breed": "Maine Coon",
+    "age": 5,
+    "gender": "Female",
+    "description": "Luna is a gentle and loving Maine Coon. She enjoys being brushed and petted. Luna is looking for a forever home where she can be the center of attention.",
+    "image": "https://img.freepik.com/free-photo/portrait-beautiful-furry-cat-posing_155003-44793.jpg?t=st=1717233671~exp=1717237271~hmac=68842f87496a106d92d7337a50243d1ab4a6084a0ab99bf71ec3468a6dee24da&w=1060",
+    "status": "Available"
+  },
+  {
+    "id": 5,
+    "name": "Daisy",
+    "species": "Rabbit",
+    "breed": "Holland Lop",
+    "age": 1,
+    "gender": "Female",
+    "description": "Daisy is a sweet and calm Holland Lop rabbit. She loves munching on fresh vegetables and enjoys being cuddled. Daisy would be a great addition to any family.",
+    "image": "https://img.freepik.com/free-photo/woman-petting-adorable-rabbit_23-2148740520.jpg?t=st=1717233714~exp=1717237314~hmac=f9183989c74bd8242f8a36bfec10ee037be90d421658f48916fadfd7067674df&w=900",
+    "status": "Available"
+  },
+  {
+    "id": 6,
+    "name": "Rocky",
+    "species": "Dog",
+    "breed": "German Shepherd",
+    "age": 6,
+    "gender": "Male",
+    "description": "Rocky is a loyal and protective German Shepherd. He is well-trained and enjoys playing frisbee. Rocky is looking for an active family who can keep up with his energy.",
+    "image": "https://img.freepik.com/free-photo/cute-black-king-shepherd-laying-middle-park-sunny-day_181624-57171.jpg?t=st=1717233753~exp=1717237353~hmac=d52ff2414b4d8d58075516bc4de6d0abef3812ef702f3aa6e101027a573381ea&w=1060",
+    "status": "Available"
+  },
+  {
+    "id": 7,
+    "name": "Milo",
+    "species": "Cat",
+    "breed": "British Shorthair",
+    "age": 3,
+    "gender": "Male",
+    "description": "Milo is a calm and affectionate British Shorthair. He loves napping in cozy spots and enjoys interactive toys. Milo would do well in a home with other cats.",
+    "image": "https://img.freepik.com/free-photo/close-up-portrait-beautiful-cat_23-2149214392.jpg?t=st=1717233784~exp=1717237384~hmac=fe7eca82eec7b81ddd4b1d2faa46f70041cbe540bac3bd07845368c69c7bb79e&w=1060",
+    "status": "Available"
+  },
+  {
+    "id": 8,
+    "name": "Coco",
+    "species": "Rabbit",
+    "breed": "Mini Rex",
+    "age": 2,
+    "gender": "Female",
+    "description": "Coco is a playful and curious Mini Rex rabbit. She loves exploring her surroundings and enjoys nibbling on hay. Coco would be a great companion for a family with children.",
+    "image": "https://img.freepik.com/free-photo/closeup-shot-cute-gray-bunny_181624-35270.jpg?t=st=1717233824~exp=1717237424~hmac=11792fd56287adac02ce1ce5045ab3bcd13c02af99fba079ece040638645c931&w=1060",
+    "status": "Available"
+  }
+]

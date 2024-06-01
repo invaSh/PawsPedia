@@ -16,15 +16,12 @@ const Cards = ({ img, title, desc, delayFactor }) => {
       <Card.Img
         variant="top"
         src={img}
-        style={{ height: "270px", objectFit: "cover", width: "100%",}}
+        style={{ height: "270px", objectFit: "cover", width: "100%", height: "100%"}}
       />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{desc}</Card.Text>
       </Card.Body>
-      <Card.Footer className="text-center">
-        <Button variant="primary" className="text-white">Read more</Button>
-      </Card.Footer>
     </Card>
   );
 };

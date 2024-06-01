@@ -12,7 +12,7 @@ import "animate.css";
 
 const CarouselItem = ({ images }) => {
   return (
-    <Row className="d-flex justify-content-center">
+    <Row className="d-flex justify-content-center" style={{ marginBottom: "10rem"}}>
       <Col md={7}>
         <Carousel
           indicators={true}

@@ -5,16 +5,16 @@ import useIntersectionObserver from "../js/useIntersectionObserver";
 
 const Video = () => {
   return (
-    <div className="container">
+    <div className="container-fluid bg-white hidden" ref={useIntersectionObserver("animate__zoomIn")}>
       <section
-        className="row hidden justify-content-center text-center align-items-center pt-5"
+        className="row justify-content-center text-center align-items-center pt-5"
         style={{ margin: "170px 0" }}
-        ref={useIntersectionObserver("animate__backInDown")}
+        
       >
         <h1 className="text-dark">
           <i>This week's rescue</i>
         </h1>
-        <div className="col-lg-9 p-5">
+        <div className="col-lg-6 p-5">
           <video
             style={{
               width: "90%",

@@ -44,27 +44,27 @@ const Home = () => {
     {
       img: "src/assets/img/pet1.jpg",
       name: "Randy",
-      desc: "Randy is a charming and affectionate 3-year-old Labrador Retriever mix looking for his forever home. This handsome boy has a heart of gold and a playful spirit that will brighten anyone's day.",
+      desc: "Randy is a charming and affectionate 3-year-old Labrador Retriever mix looking for his forever home.",
     },
     {
       img: "src/assets/img/pet4.jpg",
       name: "Whiskers",
-      desc: "Whiskers is a delightful 2-year-old domestic short-haired cat with a sweet and gentle disposition. She loves to curl up in sunny spots and enjoys gentle petting sessions. Whiskers would be the perfect companion for someone looking for a calm and loving feline friend.",
+      desc: "Whiskers is a delightful 2-year-old domestic short-haired cat with a sweet and gentle disposition.",
     },
     {
       img: "src/assets/img/pet7.jpg",
       name: "Charlie",
-      desc: "Charlie is an energetic and friendly 1-year-old parakeet with vibrant feathers and a cheerful personality. He loves to sing and mimic sounds, bringing joy to any household. Charlie is looking for a home where he can have plenty of interaction and playtime.",
+      desc: "Charlie is an energetic and friendly 1-year-old parakeet with vibrant feathers and a cheerful personality.",
     },
     {
       img: "src/assets/img/pet8.jpg",
       name: "Bella",
-      desc: "Bella is a lovable and curious 4-year-old dwarf rabbit with a soft, velvety coat. She enjoys hopping around and exploring her surroundings. Bella is very social and would thrive in a home where she can receive plenty of attention and affection.",
+      desc: "Bella is a lovable and curious 4-year-old dwarf rabbit with a soft, velvety coat. ",
     },
     {
       img: "src/assets/img/pet9.jpg",
       name: "Spike",
-      desc: "Spike is a 5-year-old bearded dragon with a calm and easygoing nature. He loves basking under a warm light and enjoys being handled gently. Spike would be a great pet for someone looking for a unique and low-maintenance reptile companion.",
+      desc: "Spike is a 5-year-old bearded dragon with a calm and easygoing nature. He loves basking under a warm light and enjoys being handled gently.",
     },
   ];
 
@@ -92,9 +92,8 @@ const Home = () => {
 
       <GridLayout />
       <Video />
-      <Banner />
       <Carousel images={images} />
-      <VolunteerForm />
+      <Banner />
     </>
   );
 };
