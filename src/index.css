@@ -316,7 +316,59 @@ body {
   background-color: #84cfc7 !important;
 }
 
-.counter h1{
+.hero-slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+.hero-slider .carousel-caption,
+.hero-slider .carousel-control-prev,
+.hero-slider .carousel-control-next,
+.hero-slider .carousel-indicators {
+  z-index: 2;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  height: 7rem;
+  width: 4rem;
+  transition: .2s;
+}
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover{
+  background-color: #84cfc875;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.arrow {
+  cursor: pointer;
+  width: 110px;
+  height: 110px;
+  z-index: 2;
+}
+
+.arrow-left {
+  position: absolute;
+  left: 20px;
+}
+
+.arrow-right {
+  position: absolute;
+  right: 20px;
+}
+
+.counter h1 {
   font-size: 4em;
 }
 
@@ -335,7 +387,7 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.grid-item .title{
+.grid-item .title {
   position: absolute;
   color: #fff;
   visibility: hidden;

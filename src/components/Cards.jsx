@@ -16,7 +16,7 @@ const Cards = ({ img, title, desc, delayFactor }) => {
       <Card.Img
         variant="top"
         src={img}
-        style={{ height: "270px", objectFit: "cover", width: "100%", height: "100%"}}
+        style={{ height: "270px", objectFit: "cover", width: "100%"}}
       />
       <Card.Body>
         <Card.Title>{title}</Card.Title>

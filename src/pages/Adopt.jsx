@@ -125,15 +125,14 @@ const Adopt = () => {
           </Row>
         </div>
       </ScrollTrigger>
-      <section className="row p-5 gap-3 justify-content-center">
+      <section className="row p-5 gap-5 justify-content-center">
         {pets.map((pet, index) => (
-          <div className="col-lg-3">
+          <div className="col-lg-2">
             <Cards
               key={index}
               img={pet.image}
               title={pet.name}
               desc={pet.description}
-              delayFactor={index * delayFactor}
             />
           </div>
         ))}
