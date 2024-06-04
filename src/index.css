@@ -333,14 +333,19 @@ body {
 .hero-slider .carousel-indicators {
   z-index: 2;
 }
-.carousel-control-prev-icon, .carousel-control-next-icon{
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
   height: 7rem;
   width: 4rem;
-  transition: .2s;
+  transition: 0.2s;
 }
-.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover{
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
   background-color: #84cfc875;
+}
 
+.flip-card{
+  cursor: pointer;
 }
 
 @keyframes fadeIn {

@@ -21,6 +21,7 @@
     "cloudinary-video-player": "^2.0.2",
     "consola": "^3.2.3",
     "framer-motion": "^11.2.6",
+    "gsap": "^3.12.5",
     "hero-slider": "^3.2.1",
     "lottie-react": "^2.4.0",
     "node-sass": "^9.0.0",
