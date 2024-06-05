@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import quizImage from "../assets/img/noimg.jpg";
-import gameImage from "../assets/img/noimg.jpg";
+import gameImage from "../assets/img/game-cards/PawsPedia..png";
 import tipsImage from "../assets/img/noimg.jpg";
 import posts from "../assets/data/posts.json";
 import Slider from "../components/Slider";
@@ -38,21 +38,7 @@ const Community = () => {
       </Container>
       <Container>
         <Row className="justify-content-md-center">
-          <Col lg={4} className="mb-4">
-            <Card>
-              <Card.Img variant="top" src={quizImage} />
-              <Card.Body>
-                <Card.Title>Take the Quiz</Card.Title>
-                <Card.Text>
-                  Find out which pet suits you best by taking our fun quiz!
-                </Card.Text>
-                <Button variant="primary" href="/quiz">
-                  Go
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col lg={4} className="mb-4">
+          <Col lg={3} className="mb-4">
             <Card>
               <Card.Img variant="top" src={gameImage} />
               <Card.Body>
@@ -60,21 +46,7 @@ const Community = () => {
                 <Card.Text>
                   Enjoy our interactive game and have fun with virtual pets!
                 </Card.Text>
-                <Button variant="primary" href="/game">
-                  Go
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col lg={4} className="mb-4">
-            <Card>
-              <Card.Img variant="top" src={tipsImage} />
-              <Card.Body>
-                <Card.Title>Pet Care Tips</Card.Title>
-                <Card.Text>
-                  Learn useful tips and tricks to take care of your pet!
-                </Card.Text>
-                <Button variant="primary" href="/pet-care-tips">
+                <Button variant="primary" href="/memorygame">
                   Go
                 </Button>
               </Card.Body>

@@ -7,7 +7,7 @@ import Video from "../components/Video";
 import Banner from "../components/Banner";
 import GridLayout from "../components/GridLayout";
 import VolunteerForm from "../components/VolunteerForm";
-
+import InteractiveButton from "../components/InteractiveButton"
 const Home = () => {
   let images = [
     {
@@ -77,7 +77,7 @@ const Home = () => {
       <Info />
       <section
         className="row justify-content-center gap-3"
-        style={{ margin: "250px 0" }}
+        style={{ margin: "150px 0" }}
         >
         {pets.map((pet, index) => (
           <Cards
@@ -89,7 +89,7 @@ const Home = () => {
           />
         ))}
       </section>
-
+      <InteractiveButton />
       <GridLayout />
       <Video />
       <Carousel images={images} />

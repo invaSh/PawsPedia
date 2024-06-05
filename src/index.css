@@ -327,22 +327,7 @@ body {
   z-index: 1;
   animation: fadeIn 0.5s ease-in-out forwards;
 }
-.hero-slider .carousel-caption,
-.hero-slider .carousel-control-prev,
-.hero-slider .carousel-control-next,
-.hero-slider .carousel-indicators {
-  z-index: 2;
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 7rem;
-  width: 4rem;
-  transition: 0.2s;
-}
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-  background-color: #84cfc875;
-}
+
 
 .flip-card{
   cursor: pointer;
@@ -356,26 +341,83 @@ body {
     opacity: 1;
   }
 }
-.arrow {
-  cursor: pointer;
-  width: 110px;
-  height: 110px;
-  z-index: 2;
-}
 
-.arrow-left {
-  position: absolute;
-  left: 20px;
-}
-
-.arrow-right {
-  position: absolute;
-  right: 20px;
-}
 
 .counter h1 {
   font-size: 4em;
 }
+
+.circular-btn{
+  position:relative;
+  display:inline-block;
+  margin:20px;
+}
+.circular-btn{
+  color:white;
+  font-weight:bold;
+  font-size:36px;
+  text-align: center;
+  text-decoration:none;
+  background-color:#76cac1;
+  display:block;
+  position:relative;
+  padding:20px 40px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=0px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #c4eeff, 0 10px 0 #259d85b6;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #028a6f;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #009476;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.circular-btn:active{
+  top:10px;
+  background-color:#3fb8a0a8;
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #259d85b6;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #028a6f;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #009476;
+}
+
+.circular-btn:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+}
+
+.animal-sounds-container {
+  overflow: hidden; /* Hide the contents initially */
+  transition: max-height 0.5s ease-in-out; /* Smooth transition effect */
+  max-height: 0; /* Set max height to 0 */
+}
+
+.animal-sounds-container.show {
+  max-height: 1000px; /* Set max height to a large value to reveal the contents */
+}
+
+.btnAnimation{
+  font-size: 1.5rem;
+  width: 100%;
+  border-radius: 30px;
+  transition: .2s ease;
+  border: transparent;
+}
+
+.btnAnimation:hover, .btnAnimation:active{
+  transform: translateY(-15px);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
 
 .grid-container {
   display: grid;
