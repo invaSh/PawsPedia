@@ -24,11 +24,12 @@ const Info = () => {
             top: "700px",
             left: "-300px",
           }}
+          id="elipse5"
         />
       </div>
       <section
         ref={useIntersectionObserver("animate__zoomIn")}
-        className="container w-100 text-dark p-5 infoContainer fs-5"
+        className="container w-100 text-dark p-5 infoContainer fs-5 hidden"
       >
 
         <h6 className="text-muted text-center">
@@ -55,7 +56,7 @@ const Info = () => {
             top: "-300px",
             right: "-500px",
             zIndex: "-1",
-          }}
+          }}id="elipse4"
         />
       </div>
       <Container style={{ marginTop: "300px", position: "relative" }}>
@@ -81,7 +82,6 @@ const Info = () => {
           </Col>
         </Row>
         <div style={{ position: "absolute", top: "425px" }} className="arrow hidden" ref={useIntersectionObserver("animate__fadeIn")}  >
-          <img src={arrow} style={{ width: "30%" }} alt=""  />
         </div>
         <Row className="text-dark align-items-center fs-5 text-center" style={{ marginBottom: "200px" }}>
           <Col lg={6} ref={useIntersectionObserver("animate__slideInRight")} style={{ animationDuration: "2s"}}>
@@ -106,7 +106,6 @@ const Info = () => {
           </Col>
         </Row>
         <div style={{ position: "absolute", top: "1150px",right: "-500px" }} className="arrow hidden" ref={useIntersectionObserver("animate__fadeIn")}  >
-          <img src={arrow} style={{ width: "30%" }} alt=""  />
         </div>
         <Row className="text-dark align-items-center justify-content-between  fs-5 text-center">
           <Col lg={6} ref={elementRef} className="hidden" style={{ animationDuration: "2s"}}>

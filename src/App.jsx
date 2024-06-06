@@ -4,8 +4,8 @@ import Adopt from "./pages/Adopt";
 import List from "./pages/List";
 import Community from "./pages/Community";
 import Post from "./pages/Post";
-// import MemoryGame from "./pages/MemoryGame";
-// import Quiz from "./pages/Quiz";
+import MemoryGame from "./pages/MemoryGame";
+import Hero from "./pages/Hero";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
           <Route path="/list" element={<List />} />
           <Route path="/community" element={<Community />} />
           <Route path="/post/:id" element={<Post />} />
-          {/* <Route path="/memorygame" element={<MemoryGame />} /> */}
-          {/* <Route path="/quiz" element={<Quiz />} /> */}
+          <Route path="/memorygame" element={<MemoryGame />} />
+          <Route path="/pixi" element={<Hero />} />
         </Routes>
       </Router>
     </>

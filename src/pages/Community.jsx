@@ -1,13 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import quizImage from "../assets/img/noimg.jpg";
 import gameImage from "../assets/img/game-cards/PawsPedia..png";
-import tipsImage from "../assets/img/noimg.jpg";
 import posts from "../assets/data/posts.json";
-import Slider from "../components/Slider";
-import useIntersectionObserver from "../js/useIntersectionObserver";
-
+import Hero from "../pages/Hero";
 
 const Community = () => {
   const navigate = useNavigate();
@@ -27,14 +23,25 @@ const Community = () => {
 
   return (
     <>
-      <Container 
-      fluid 
-      style={{
-        marginBottom: "8rem",
-        padding: "0"
-      }}
+      <Container
+        fluid
+        style={{
+          marginBottom: "8rem",
+          padding: "0",
+          height: "80vh",
+        }}
+        className="hero-container"
       >
-        <Slider />
+        <div className="hero-titlee text-center ">
+          <h1 className="animate__animated animate__fadeInDown">Join Our Pet-Loving Community</h1>
+          <p className="animate__animated animate__fadeInDown" style={{ animationDelay:"0.5s" }}>
+            Welcome to Our Pet-Loving Community! Discover the fulfillment of
+            adopting, nurturing, and connecting with pets. Share in the joy of
+            building loving relationships that enrich both human and animal
+            lives.
+          </p>
+        </div>
+        <Hero />
       </Container>
       <Container>
         <Row className="justify-content-md-center">
